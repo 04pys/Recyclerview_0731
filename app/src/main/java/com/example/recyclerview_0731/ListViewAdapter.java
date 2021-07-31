@@ -1,5 +1,6 @@
 package com.example.recyclerview_0731;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ public class ListViewAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
+        Log.d("Tag","getcount가 호출됨");
         return list.size();
     }
 
@@ -34,14 +36,16 @@ public class ListViewAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
+        //xml 인플레이트 하는과정
         LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
         View itemView = layoutInflater.inflate(R.layout.item_text,viewGroup,false);
 
+        //findviewbyid 과정
         TextView itemText = itemView.findViewById(R.id.item_text);
 
+        //현위치 데이터 뽑아서 아이템뷰에 적용하는 과정
         String data = list.get(i);
         itemText.setText(data);
-
 
         return itemView;
     }
