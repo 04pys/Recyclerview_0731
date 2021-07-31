@@ -13,7 +13,7 @@ public class ListViewAdapter extends BaseAdapter {
     List<String> list;
     public ListViewAdapter(List<String> list) {
         super();
-
+        this.list = list;
     }
 
     @Override
