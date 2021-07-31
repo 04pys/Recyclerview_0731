@@ -16,7 +16,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public RecyclerViewAdapter(List<String> list) {
         super();
-        this.list = this.list;
+        this.list = list;
     }
 
     @NonNull
