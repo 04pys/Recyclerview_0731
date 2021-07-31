@@ -7,6 +7,7 @@
     tools:context=".Recyclerview_base">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewbase"
         android:layout_width="409dp"
         android:layout_height="729dp"
         app:layout_constraintBottom_toBottomOf="parent"
