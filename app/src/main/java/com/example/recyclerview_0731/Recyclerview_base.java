@@ -35,7 +35,7 @@ public class Recyclerview_base extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 list.add("추가된 아이템");
-                adapter.notifyDataSetChanged();
+                adapter.notifyItemInserted(list.size() - 1);
             }
         });
 
