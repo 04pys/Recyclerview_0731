@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class RecyclerViewListAdapter extends ListAdapter<String, RecyclerViewListAdapter.ViewHolder> {
-    List<String> list;
 
     public RecyclerViewListAdapter(@NonNull DiffUtil.ItemCallback<String> diffCallback){
         super(diffCallback);
@@ -32,12 +31,12 @@ public class RecyclerViewListAdapter extends ListAdapter<String, RecyclerViewLis
     public void onBindViewHolder(@NonNull RecyclerViewListAdapter.ViewHolder holder, int position) {
         holder.itemText.setText(getItem(position));
     }
-
     public static class ViewHolder extends RecyclerView.ViewHolder{
         TextView itemText;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             itemText = itemView.findViewById(R.id.item_text);
+
         }
     }
 }
