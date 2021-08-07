@@ -25,6 +25,7 @@ public class Recyclerview_list extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerviewlist);
         add = findViewById(R.id.buttonadd);
 
+        list.add("1.첫번쨰");
         recyclerViewListAdapter = new RecyclerViewListAdapter(new MyDiffUtil());
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(recyclerViewListAdapter);
@@ -32,6 +33,7 @@ public class Recyclerview_list extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 list.add("추가된 아이템");
+                recyclerViewListAdapter.submitList(list);
             }
         });
 
